@@ -1,17 +1,21 @@
+import { CssBaseline } from '@material-ui/core';
+import store from 'app/store';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { CssBaseline } from '@material-ui/core';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <CssBaseline />
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <CssBaseline />
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

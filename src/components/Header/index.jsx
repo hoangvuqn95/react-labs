@@ -42,6 +42,10 @@ function Header() {
             <Button color="inherit">RENDERING</Button>
           </NavLink>
 
+          <NavLink to="/students" className={classes.link}>
+            <Button color="inherit">STUDENTS</Button>
+          </NavLink>
+
           <NavLink to="/todos" className={classes.link}>
             <Button color="inherit">TODO</Button>
           </NavLink>
